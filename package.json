@@ -1,0 +1,28 @@
+{
+  "name": "cypress_1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Cypress",
+    "mocha",
+    "chai",
+    "git",
+    "github",
+    "jenkins"
+  ],
+  "author": "shashi",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^13.6.3"
+  },
+  "devDependencies": {
+    "@4tw/cypress-drag-drop": "^2.2.5",
+    "@shelex/cypress-allure-plugin": "^2.40.1",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-mochawesome-reporter": "^3.8.1"
+  }
+}
