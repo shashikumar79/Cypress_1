@@ -16,7 +16,7 @@ describe('fileupload', () => {
         cy.get('a[type="button"]').click()
 
         cy.readFile('cypress/downloads/samplefile.pdf').should('exist')
-        cy.wait(3000)
+        
         cy.writeFile('cypress/fixtures/sample.text', 'saiKumar')
     })
 })
