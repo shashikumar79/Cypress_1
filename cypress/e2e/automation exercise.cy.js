@@ -14,8 +14,6 @@ cy.contains('Rs. 500').should('contain','Rs. 500')
 cy.url().should('eq','https://automationexercise.com/product_details/1')
 
 
-
-
     })
 
 })

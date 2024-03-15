@@ -20,3 +20,4 @@ describe('fileupload', () => {
         cy.writeFile('cypress/fixtures/sample.text', 'saiKumar')
     })
 })
+
