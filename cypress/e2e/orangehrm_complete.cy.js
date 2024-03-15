@@ -90,6 +90,7 @@ cy.get('input[class="oxd-input oxd-input--active"]').eq(5).type('1999-02-03')
 cy.contains('Male').click()
 cy.get('button[class="oxd-button oxd-button--medium oxd-button--secondary orangehrm-left-space"]').first().click()
 
+
     
 })
 
