@@ -23,10 +23,11 @@
 ///// <reference types="cypress" />
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+require('cypress-downloadfile/lib/downloadFileCommand')
 import 'cypress-file-upload';
 
 require('@4tw/cypress-drag-drop')
-    Cypress.Commands.add('orangelogin',()=>{
+Cypress.Commands.add('orangelogin',()=>{
 
     cy.get('[name="username"]').type('Admin')
     cy.get('[name="password"]').type('admin123')

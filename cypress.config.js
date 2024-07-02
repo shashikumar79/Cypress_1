@@ -2,7 +2,7 @@ const { defineConfig } = require("cypress");
 const allureWriter = require('@shelex/cypress-allure-plugin/writer');
 
 module.exports = defineConfig({
-  pageLoadTimeout:60000,
+  pageLoadTimeout:120000,
   defaultCommandTimeout:4000,
   // retries: {
   //   runMode: 0,
@@ -11,6 +11,17 @@ module.exports = defineConfig({
   reporter: 'cypress-mochawesome-reporter',
   e2e: {
     baseUrl:"https://opensource-demo.orangehrmlive.com",
+    setupNodeEvents(on, config) {
+      
+      on('task', {
+        hello({ greeting, name }) {
+          console.log('%s, %s', greeting, name)
+
+          return null
+        },
+      })
+    },
+  },
     "video":true,
     "screenshots":true,
     "viewportWidth":1920,
@@ -23,5 +34,6 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
     
-  },
+    
+  
 });

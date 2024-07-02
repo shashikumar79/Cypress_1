@@ -24,6 +24,5 @@ describe('shadowdom', () => {
         cy.reload()
 
 
-
     })
 })

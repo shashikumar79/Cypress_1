@@ -1,5 +1,25 @@
+
 describe('automation exercise practice',()=>{
     it('automationexercise e commerce',()=>{
+
+        // buttons
+        // textFields
+        // checkbox
+        // radiobox
+        // alerts
+        // iframes
+        // Tabss
+        // mouseevents
+        // draganddrop
+        // shadowElement
+        // links
+        // tablesss
+        // customcommand
+        // fileupload
+        // filedowload
+        // readfile
+        // writefiless
+        // sessionn
 
 cy.visit('https://automationexercise.com/')
 cy.get('[class="title text-center"]').first().scrollIntoView()

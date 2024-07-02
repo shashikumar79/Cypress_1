@@ -16,12 +16,11 @@
   ],
   "author": "shashi",
   "license": "ISC",
-  "dependencies": {
-    "cypress": "^13.6.3"
-  },
   "devDependencies": {
     "@4tw/cypress-drag-drop": "^2.2.5",
     "@shelex/cypress-allure-plugin": "^2.40.1",
+    "cypress": "^13.12.0",
+    "cypress-downloadfile": "^1.2.4",
     "cypress-file-upload": "^5.0.8",
     "cypress-mochawesome-reporter": "^3.8.1"
   }
