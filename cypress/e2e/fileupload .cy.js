@@ -7,7 +7,7 @@ describe('fileupload', () => {
         cy.get('[id="upload-btn"]').click()
         cy.contains('Thank you for your message. It has been sent.').should('be.visible').and('have.text', 'Thank you for your message. It has been sent.')
     })
-    it.only('downloadfile', () => {
+    it('downloadfile', () => {
         cy.on('uncaught:exception', () => {
 
             return false

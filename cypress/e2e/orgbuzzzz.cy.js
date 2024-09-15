@@ -1,19 +1,17 @@
-import buzdata from '../fixtures/buzzdata.json'
 
+import data from '../fixtures/buzzdata.json'
 
 
  
 describe('practice', () => {
 
     it('practicceee', () => {
-        cy.fixture('fixtures/buzzdata.json').then((data) => {
+        // cy.fixture('fixtures/buzzdata.json').then((data) => {
    
-            this.data=data
-          
-        })
-
+        //     this.data=data
+        
+        // })
         cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/buzz/viewBuzz')
-
         cy.get('[name="username"]').type(data.username)
         cy.get('[name="password"]').type(data.password)
         cy.contains(' Login ').click()
@@ -25,7 +23,6 @@ describe('practice', () => {
             var orgtext=realtext.text()
             cy.log(orgtext)
             cy.writeFile('C:/Users/USER/Documents/Cypress_1/cypress/fixtures/buzzdata222.json',{orgtext},{ flag: 'a+' })
-       
        
         })
     })

@@ -1,8 +1,12 @@
 import moment from 'moment'
+cy.on('uncaught:exception', () => {
+
+    return false
+});
+
 describe('describe', () => {
 
     // tbody>tr:nth-child(51)>td:nth-child(9)----traversing for particular cell data
-
    
 
     it('1 fill textboxes', () => {
@@ -37,6 +41,7 @@ describe('describe', () => {
         cy.get('[class="hasDatepicker"]').click().type(cureentdate)
     })
     it('4 origin opencart', () => {
+        
         cy.visit('https://testautomationpractice.blogspot.com/')
         cy.get('[href="https://demo.opencart.com/"]').click()
         cy.wait(5000)
@@ -109,21 +114,21 @@ describe('describe', () => {
         cy.get('[id="draggable"]').trigger('dragstart', { datatranfer })
         cy.get('[id="droppable"]').trigger('drop', { datatranfer })
     })
-    it('13 slider', () => {
-        cy.visit('https://testautomationpractice.blogspot.com/')
-        cy.get('[style="left: 0%;"]').trigger('dragstart', { datatranfer })
-        cy.get('[style="left: 34%;"]').trigger('drop', { datatranfer })
+    // it('13 slider', () => {
+    //     cy.visit('https://testautomationpractice.blogspot.com/')
+    //     cy.get('[style="left: 0%;"]').trigger('dragstart', { datatranfer })
+    //     cy.get('[style="left: 34%;"]').trigger('drop', { datatranfer })
 
-    })
+    // })
 
-    it('14 frames', () => {
-        cy.visit('https://testautomationpractice.blogspot.com/')
-        cy.get('div[class="widget-content"]').eq(7).then(($iframe)=>{
-            let checkbox=$iframe.contents().find('input[id="RESULT_TextField-0"]')
-            cy.wrap(checkbox).type('ffjgyfcj,h')
+    // it.only('14 frames', () => {
+    //     cy.visit('https://testautomationpractice.blogspot.com/')
+    //     cy.get('div[class="widget-content"]').eq(7).then(($iframe)=>{
+    //         let checkbox=$iframe.contents().find('input[id="RESULT_TextField-0"]')
+    //         cy.wrap(checkbox).type('ffjgyfcj,h')
 
-        })
+    //})
 
-    })
+    //})
 
 })

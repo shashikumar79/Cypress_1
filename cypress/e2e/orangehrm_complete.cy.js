@@ -1,6 +1,6 @@
 import logindatacreds from "../fixtures/orangehrm_login_credsdata.json"
-import orangeloginpage from "../orangehrm_login.po"
-import orangepimpage from "../orangehrmpim.po"
+import orangeloginpage from "../pages/orange.po"
+import orangepimpage from "../pages/orangepim.po"
 
 describe('orange hrm application', () => {
     cy.on('uncaught:exception', () => {
@@ -74,7 +74,7 @@ it.only('7 pim emplist personal details',()=>{
     cy.orangelogibncreds(logindatacreds.case5.username, logindatacreds.case5.password)
     orangepimpage.pimtext().click()
     orangepimpage.emplisttext().click()
-    orangepimpage.emplistempname().type('shashijhon thomas')
+    orangepimpage.emplistempname().type('shashijhon  thomas')
     orangepimpage.emplistsearchbtn().click()
     orangepimpage.pimthomasclick().click()
     orangepimpage.pimpersonaldetailsimageclick().click()

@@ -1,4 +1,4 @@
-import addemp from "./orangehrm.po"
+import addemp from "../pages/orangehrm.po"
 import data1 from '../fixtures/orangeaddempdata.json'
 describe('add emp and search', () => {
 

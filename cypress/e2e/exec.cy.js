@@ -14,7 +14,7 @@ describe('Example of cy.exec', () => {
         // Running the first system command
         cy.exec('echo "Hello, World!"').then((result) => {
             // Logging the stdout from the command
-            cy.log(result.stdout);
+            cy.log(result);
             // Asserting the stdout contains the expected text
             expect(result.stdout).to.contain('Hello, World!');
         });

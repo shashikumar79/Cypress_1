@@ -8,7 +8,7 @@ describe('verify the facebook create account functionality',()=>{
         cy.get("##u_5_5_mB").check()
     })
 
-    it.only('verify the date of birth functionality',()=>{
+    it('verify the date of birth functionality',()=>{
 
         cy.visit("https://the-internet.herokuapp.com/")
         cy.contains("Digest Authentication").click()

@@ -69,7 +69,7 @@ pimprofileerrmsg()
 }
 pimthomasclick()
 {
-    return cy.contains('thomas')
+    return cy.contains('shashijhon  thomas')
 }
 pimpersonaldetailsimageclick()
 {
