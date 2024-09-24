@@ -10,7 +10,7 @@ describe('shadowdom', () => {
         cy.writeFile('cypress/fixtures/shashi.text', 'dfgdhfjhfgdmh', { flag: 'a+' })
     })
 
-    it.only('scrolloption', () => {
+    it('scrolloption', () => {
         cy.on('uncaught:exception', () => {
 
             return false

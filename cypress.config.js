@@ -5,7 +5,7 @@ const mochawesomeReporter = require('cypress-mochawesome-reporter/plugin');
 
 module.exports = defineConfig({
   pageLoadTimeout: 120000,
-  defaultCommandTimeout: 4000,
+  defaultCommandTimeout: 6000,
   reporter: 'cypress-mochawesome-reporter',
   
   e2e: {
@@ -13,7 +13,10 @@ module.exports = defineConfig({
       "Url": "https://practice.expandtesting.com/login",
       "username": "practice",
       "password": "SuperSecretPassword!",
+
+      "url1":"https://testautomationpractice.blogspot.com/",
     },
+  
     baseUrl: "https://opensource-demo.orangehrmlive.com",
     setupNodeEvents(on, config) {
       on('task', { downloadFile });

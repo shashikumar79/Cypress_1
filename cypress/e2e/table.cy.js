@@ -7,14 +7,15 @@ cy.on('uncaught:exception', () => {
 describe('describe', () => {
 
     // tbody>tr:nth-child(51)>td:nth-child(9)----traversing for particular cell data
-   
 
-    it('1 fill textboxes', () => {
+
+    it.only('1 fill textboxes', () => {
         cy.on('uncaught:exception', () => {
 
             return false
         });
-        cy.visit('https://testautomationpractice.blogspot.com/')
+        // cy.visit('https://testautomationpractice.blogspot.com/')
+        cy.visit(Cypress.env('url1'))
         cy.get('#name').type('gdsahGH')
         cy.get('#email').type('galhfgl@gmail')
         cy.get('#phone').type('8877667899')
@@ -41,7 +42,7 @@ describe('describe', () => {
         cy.get('[class="hasDatepicker"]').click().type(cureentdate)
     })
     it('4 origin opencart', () => {
-        
+
         cy.visit('https://testautomationpractice.blogspot.com/')
         cy.get('[href="https://demo.opencart.com/"]').click()
         cy.wait(5000)
@@ -53,7 +54,7 @@ describe('describe', () => {
         cy.wait(5000)
     })
     it('5 origin orange', () => {
-        cy.visit('https://testautomationpractice.blogspot.com/')
+        cy.visit(cypress.env('url'))
         cy.get('a[href="https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"]').click()
         cy.wait(5000)
         cy.origin('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login', () => {
@@ -130,5 +131,20 @@ describe('describe', () => {
     //})
 
     //})
+
+    describe('13table dropdown', () => {
+
+        it('table', () => {
+
+
+            cy.visit('https://www.dezlearn.com/webtable-example/')
+            
+             cy.get(':nth-child(2) > :nth-child(5) > select').select('Suv')
+            //  cy.get('tbody>tr:nth-child(2)>td:nth-child(5)').select('Suv')
+
+
+        })
+
+    })
 
 })
