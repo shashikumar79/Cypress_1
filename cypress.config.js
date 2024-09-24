@@ -1,5 +1,4 @@
 const { defineConfig } = require("cypress");
-const allureWriter = require('@shelex/cypress-allure-plugin/writer');
 const { downloadFile } = require('cypress-downloadfile/lib/addPlugin');
 const mochawesomeReporter = require('cypress-mochawesome-reporter/plugin');
 
@@ -28,7 +27,7 @@ module.exports = defineConfig({
         },
       });
 
-      allureWriter(on, config);
+      
       mochawesomeReporter(on);
       return config;
     }
