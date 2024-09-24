@@ -27,16 +27,3 @@ require('cypress-downloadfile/lib/downloadFileCommand')
 import 'cypress-file-upload';
 
 require('@4tw/cypress-drag-drop')
-Cypress.Commands.add('orangelogin',()=>{
-
-    cy.get('[name="username"]').type('Admin')
-    cy.get('[name="password"]').type('admin123')
-    cy.get('[type="submit"]').click()
-
-})
-
-Cypress.Commands.add('orangelogibncreds',(username,password)=>{
-cy.get('input[name="username"]').type(username)
-cy.get('input[type="password"]').type(password)
-cy.get('button[type="submit"]').click()
-})

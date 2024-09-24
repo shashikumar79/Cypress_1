@@ -5,7 +5,7 @@ describe('challenging dom elements', () => {
         
         cy.visit('https://www.amazon.in/gp/aw/c')
 
-        cy.get('#nav-xshop-container').then((tess) => {
+        cy.get('#nav-xshop-container').each((tess) => {
 
             var txt = tess.text()
             cy.log(txt)
@@ -14,8 +14,6 @@ describe('challenging dom elements', () => {
     })
 
 it('text print',()=>{
-
-
 
         cy.visit('https://the-internet.herokuapp.com/')
         cy.contains("Challenging DOM").click()
