@@ -16,7 +16,7 @@ describe('add element', () => {
         
 
     })
-    it.only('challenging dom', () => {
+    it('challenging dom', () => {
     cy.visit('https://the-internet.herokuapp.com/')
     cy.contains('Challenging DOM').click()
     cy.get('tbody>tr:nth-child(6)>td:nth-child(4)').should('be.visible')

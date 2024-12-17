@@ -24,6 +24,9 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 require('cypress-downloadfile/lib/downloadFileCommand')
+// import cypress from 'cypress';
 import 'cypress-file-upload';
 
-require('@4tw/cypress-drag-drop')
+require('@4tw/cypress-drag-drop');
+
+
