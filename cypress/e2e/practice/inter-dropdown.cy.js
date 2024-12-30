@@ -9,7 +9,7 @@ describe('internetdropdown', () => {
         cy.get('[id="dropdown"]').select(1)
 
     })
-    it.only('filedownload', () => {
+    it('filedownload', () => {
         cy.visit('https://the-internet.herokuapp.com/')
         // cy.contains('File Download').click()
         // cy.downloadfile('lamp.jpg','cypress/downloads','lamp.jpg')

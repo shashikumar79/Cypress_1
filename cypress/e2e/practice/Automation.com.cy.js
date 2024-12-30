@@ -4,8 +4,8 @@
 //    (//span[@class="pull-right"])[5]      indexing with number
 
 
-import register from '../pages/Automation.com.po'
-import automationdata from '../fixtures/Automation.com.data.json'
+import register from '../../pages/Automation.com.po'
+import automationdata from '../../fixtures/Automation.com.data.json'
 describe('automation excercise', () => {
 
     Cypress.on('uncaught:exception', (err, runnable) => {

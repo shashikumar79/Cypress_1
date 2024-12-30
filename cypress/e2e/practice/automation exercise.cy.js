@@ -52,7 +52,7 @@ describe('automation exercise practice', () => {
     //     break;
     // }
     // })
-    it.only('example', () => {
+    it('example', () => {
         cy.visit('https://www.wikipedia.org/')
 
         var arr = []

@@ -9,7 +9,7 @@ describe('describe', () => {
     // tbody>tr:nth-child(51)>td:nth-child(9)----traversing for particular cell data
 
 
-    it.only('1 fill textboxes', () => {
+    it('1 fill textboxes', () => {
         cy.on('uncaught:exception', () => {
 
             return false
