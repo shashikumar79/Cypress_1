@@ -1,9 +1,9 @@
 
-import data from '../../fixtures/stock.json'
+import data from '../fixtures/stock.json'
 describe('Fetch Stock Data', () => {
     it('Visits the NDTV Profit stocks page and logs stock data', () => {
-        cy.visit('https://www.ndtvprofit.com/markets/equities/stocks-in-indices', { timeout: 120000 });
-        cy.wait(10000);
+        cy.visit('https://www.ndtvprofit.com/markets/equities/stocks-in-indices', { timeout: 60000 });
+        cy.wait(8000);
 
         const stockData = [];
 

@@ -8,6 +8,9 @@ module.exports = defineConfig({
   reporter: 'cypress-mochawesome-reporter',
   
   e2e: {
+    // specPattern:"**/*.feature",
+    
+    
     env: {
       "Url": "https://practice.expandtesting.com/login",
       "username": "practice",
@@ -16,7 +19,9 @@ module.exports = defineConfig({
       "url1":"https://testautomationpractice.blogspot.com/",
 
 
+    
       "Url_1":"https://automationexercise.com/",
+      "cookie":"orangehrm=qn6vl8f2qnigub80bol88dlpma"
     },
   
     baseUrl: "https://opensource-demo.orangehrmlive.com",
@@ -27,6 +32,7 @@ module.exports = defineConfig({
         hello({ greeting, name }) {
           console.log('%s, %s', greeting, name);
           return null;
+          return require('./cypress/plugins/index.js')(on,config)
         },
       });
 

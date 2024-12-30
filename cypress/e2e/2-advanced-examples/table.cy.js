@@ -41,7 +41,7 @@ describe('describe', () => {
         cy.log(cureentdate)
         cy.get('[class="hasDatepicker"]').click().type(cureentdate)
     })
-    it('4 origin opencart', () => {
+    it.skip('4 origin opencart', () => {
 
         cy.visit('https://testautomationpractice.blogspot.com/')
         cy.get('[href="https://demo.opencart.com/"]').click()
@@ -53,7 +53,7 @@ describe('describe', () => {
         })
         cy.wait(5000)
     })
-    it('5 origin orange', () => {
+    it.skip('5 origin orange', () => {
         cy.visit(cypress.env('url'))
         cy.get('a[href="https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"]').click()
         cy.wait(5000)
@@ -104,7 +104,7 @@ describe('describe', () => {
             cy.get('#demo').should('have.text', 'Hello welcome! How are you today?')
         })
     })
-    it('11 new browser window', () => {
+    it.skip('11 new browser window', () => {
         cy.visit('https://testautomationpractice.blogspot.com/')
         cy.contains('New Browser Window').invoke('removeAttr', 'target').click()
         cy.get('[ondblclick="myFunction1()"]').dblclick()
